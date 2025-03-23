@@ -1,4 +1,4 @@
-# KÜtÜphane-Otomasyon
+# Kütüphane-Otomasyon
 Kütüphane yönetimini kolaylaştıran c# ve sql kullanarak yapılmış bir program
 
 
