@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ktphaneModelStoreContainer" CdmEntityContainer="ktphaneEntities1">
+    <EntitySetMapping Name="kullanici">
+      <EntityTypeMapping TypeName="ktphaneModel.kullanici">
+        <MappingFragment StoreEntitySet="kullanici">
+          <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+          <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
+          <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />
+          <ScalarProperty Name="kullanici_tc" ColumnName="kullanici_tc" />
+          <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+          <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
+          <ScalarProperty Name="kullanici_ceza" ColumnName="kullanici_ceza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personeller">
+      <EntityTypeMapping TypeName="ktphaneModel.personeller">
+        <MappingFragment StoreEntitySet="personeller">
+          <ScalarProperty Name="personel_ıd" ColumnName="personel_ıd" />
+          <ScalarProperty Name="personel_ad" ColumnName="personel_ad" />
+          <ScalarProperty Name="personel_soyad" ColumnName="personel_soyad" />
+          <ScalarProperty Name="personel_tc" ColumnName="personel_tc" />
+          <ScalarProperty Name="personel_tel" ColumnName="personel_tel" />
+          <ScalarProperty Name="personel_mail" ColumnName="personel_mail" />
+          <ScalarProperty Name="personel_kulad" ColumnName="personel_kulad" />
+          <ScalarProperty Name="personel_şifre" ColumnName="personel_şifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

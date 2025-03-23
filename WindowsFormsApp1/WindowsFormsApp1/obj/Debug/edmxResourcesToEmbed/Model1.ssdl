@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ktphaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanici_ad" Type="nchar" MaxLength="50" />
+    <Property Name="kullanici_soyad" Type="nchar" MaxLength="50" />
+    <Property Name="kullanici_tc" Type="nchar" MaxLength="11" />
+    <Property Name="kullanici_mail" Type="nchar" MaxLength="50" />
+    <Property Name="kullanici_tel" Type="nchar" MaxLength="11" />
+    <Property Name="kullanici_ceza" Type="float" />
+  </EntityType>
+  <EntityType Name="personeller">
+    <Key>
+      <PropertyRef Name="personel_ıd" />
+    </Key>
+    <Property Name="personel_ıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personel_ad" Type="nchar" MaxLength="50" />
+    <Property Name="personel_soyad" Type="nchar" MaxLength="50" />
+    <Property Name="personel_tc" Type="nchar" MaxLength="11" />
+    <Property Name="personel_tel" Type="nchar" MaxLength="11" />
+    <Property Name="personel_mail" Type="nchar" MaxLength="50" />
+    <Property Name="personel_kulad" Type="nchar" MaxLength="50" />
+    <Property Name="personel_şifre" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ktphaneModelStoreContainer">
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personeller" EntityType="Self.personeller" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ktphaneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanici_ad" Type="nchar" MaxLength="50" />
+          <Property Name="kullanici_soyad" Type="nchar" MaxLength="50" />
+          <Property Name="kullanici_tc" Type="nchar" MaxLength="11" />
+          <Property Name="kullanici_mail" Type="nchar" MaxLength="50" />
+          <Property Name="kullanici_tel" Type="nchar" MaxLength="11" />
+          <Property Name="kullanici_ceza" Type="float" />
+        </EntityType>
+        <EntityType Name="personeller">
+          <Key>
+            <PropertyRef Name="personel_ıd" />
+          </Key>
+          <Property Name="personel_ıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personel_ad" Type="nchar" MaxLength="50" />
+          <Property Name="personel_soyad" Type="nchar" MaxLength="50" />
+          <Property Name="personel_tc" Type="nchar" MaxLength="11" />
+          <Property Name="personel_tel" Type="nchar" MaxLength="11" />
+          <Property Name="personel_mail" Type="nchar" MaxLength="50" />
+          <Property Name="personel_kulad" Type="nchar" MaxLength="50" />
+          <Property Name="personel_şifre" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ktphaneModelStoreContainer">
+          <EntitySet Name="kullanici" EntityType="Self.kullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="personeller" EntityType="Self.personeller" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ktphaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="kullanici">
+          <Key>
+            <PropertyRef Name="kullanici_id" />
+          </Key>
+          <Property Name="kullanici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_soyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="kullanici_ceza" Type="Double" />
+        </EntityType>
+        <EntityType Name="personeller">
+          <Key>
+            <PropertyRef Name="personel_ıd" />
+          </Key>
+          <Property Name="personel_ıd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personel_ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personel_soyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personel_tc" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="personel_tel" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+          <Property Name="personel_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personel_kulad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="personel_şifre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ktphaneEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kullanici" EntityType="Self.kullanici" />
+          <EntitySet Name="personeller" EntityType="Self.personeller" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ktphaneModelStoreContainer" CdmEntityContainer="ktphaneEntities1">
+          <EntitySetMapping Name="kullanici">
+            <EntityTypeMapping TypeName="ktphaneModel.kullanici">
+              <MappingFragment StoreEntitySet="kullanici">
+                <ScalarProperty Name="kullanici_id" ColumnName="kullanici_id" />
+                <ScalarProperty Name="kullanici_ad" ColumnName="kullanici_ad" />
+                <ScalarProperty Name="kullanici_soyad" ColumnName="kullanici_soyad" />
+                <ScalarProperty Name="kullanici_tc" ColumnName="kullanici_tc" />
+                <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+                <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
+                <ScalarProperty Name="kullanici_ceza" ColumnName="kullanici_ceza" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personeller">
+            <EntityTypeMapping TypeName="ktphaneModel.personeller">
+              <MappingFragment StoreEntitySet="personeller">
+                <ScalarProperty Name="personel_ıd" ColumnName="personel_ıd" />
+                <ScalarProperty Name="personel_ad" ColumnName="personel_ad" />
+                <ScalarProperty Name="personel_soyad" ColumnName="personel_soyad" />
+                <ScalarProperty Name="personel_tc" ColumnName="personel_tc" />
+                <ScalarProperty Name="personel_tel" ColumnName="personel_tel" />
+                <ScalarProperty Name="personel_mail" ColumnName="personel_mail" />
+                <ScalarProperty Name="personel_kulad" ColumnName="personel_kulad" />
+                <ScalarProperty Name="personel_şifre" ColumnName="personel_şifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
